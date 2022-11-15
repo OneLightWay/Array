@@ -1,0 +1,91 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int pilih,daftar_bilangan[10];
+    cout << "\t\tMenu" << endl;
+    cout << endl;
+    cout << "\t1. Input Array" << endl;
+    cout << "\t2. Tampilan Array" << endl;
+    cout << "\t3. Cari Nilai Minimum" << endl;
+    cout << "\t4. Cari Nilai Maksimum" << endl;
+    cout << "\t5. Hitung Rata-rata"<< endl;
+    cout << "\tMasukan Pilihan : ";
+    cin >> pilih;
+    cout << endl;
+
+    while (pilih<6){
+    switch (pilih){
+        case 1:
+           cout << "Pilihan : Menginput Array" << endl;
+           for (int bilangan,i=0,j=1;i<10;i++,j++){
+            cout << "Masukkan Bilangan " << j << " : ";
+            cin >> bilangan;
+            daftar_bilangan[i]=bilangan;
+           }
+           cout << endl;
+           cout << "======> Masukan Pilihan : ";
+           cin >> pilih;
+           break;
+        case 2:
+            cout << "Pilihan : Menampilkan Array" << endl;
+            cout << "Array : ";
+            {for (int i=0;i<10;i++){
+                cout << daftar_bilangan[i] << " ";
+            }
+            }
+            cout << endl;
+            cout << endl;
+            cout << "======> Masukan Pilihan : ";
+            cin >> pilih;
+            break;
+        case 3:
+            cout << "Pilihan : Mencari nilai minimum" << endl;
+            {int minimum = daftar_bilangan[0];
+            for (int i=0;i<10;i++){
+                    if(minimum>daftar_bilangan[i]){
+                        minimum = daftar_bilangan[i];
+                }
+            }
+            cout << "Nilai Minimum adalah " << minimum << endl;
+            }
+            cout << endl;
+            cout << "======> Masukan Pilihan : ";
+            cin >> pilih;
+            break;
+        case 4:
+            cout << "Pilihan : Mencari nilai maksimum" << endl;
+            {int maks=0;
+            for (int i=0;i<10;i++){
+                    if(maks<daftar_bilangan[i]){
+                        maks = daftar_bilangan[i];
+                }
+            }
+            cout << "Nilai Maksimum adalah " << maks << endl;
+            }
+            cout << endl;
+            cout << "======> Masukan Pilihan : ";
+            cin >> pilih;
+            break;
+        case 5:
+            cout << "Pilihan : Mencari Rata-rata Nilai" << endl;
+            {float range = 0;
+            for (int i=0;i<10;i++){
+                range = range + daftar_bilangan[i];
+            }
+            range = range / 10;
+            cout << "Rata-ratanya adalah : " << range << endl;
+            }
+            cout << endl;
+            cout << "======> Masukan Pilihan : ";
+            cin >> pilih;
+            break;
+    }
+    }
+    if (pilih>=6){
+        cout << "Tidak ada pilihan tersedia" << endl;
+    }
+    return 0;
+}
