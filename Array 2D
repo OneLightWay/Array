@@ -1,0 +1,66 @@
+/*
+    Nama: Ray Fadly Hadi
+    NIM : 21102236
+    Kelas: S1IF-09-G
+*/
+#include <iostream>
+
+using namespace std;
+
+int matriks_A[3][3],matriks_B[3][3],C[3][3],elemen;
+
+int main()
+{
+    cout << "Masukkan Elemen Matriks A" << endl;
+    for (int i=0;i<3;i++){
+        for (int j=0;j<3;j++){
+            cout << "a" << i+1 << j+1 << " : ";
+            cin >> elemen;
+            matriks_A[i][j]=elemen;
+        }
+    }
+    cout << endl;
+    cout << "Masukkan Elemen Matriks B" << endl;
+    for (int i=0;i<3;i++){
+        for (int j=0;j<3;j++){
+            cout << "b" << i+1 << j+1 << " : ";
+            cin >> elemen;
+            matriks_B[i][j]=elemen;
+        }
+    }
+    cout << endl;
+    cout << "Matriks A : " << endl;
+    for (int i=0;i<3;i++){
+        for (int j=0;j<3;j++){
+            cout << matriks_A[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << endl;
+        cout << "Matriks B : " << endl;
+    for (int i=0;i<3;i++){
+        for (int j=0;j<3;j++){
+            cout << matriks_B[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << endl;
+    cout << "Matriks Penjumlahan : " << endl;
+    for (int i=0; i<3; i++){
+        for (int j=0; j<3; j++){
+            C[i][j] = matriks_A[i][j] + matriks_B[i][j];
+            cout << C[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << endl;
+    cout << "Matriks Pengurangan : " << endl;
+    for (int i=0; i<3; i++){
+        for (int j=0; j<3; j++){
+            C[i][j] = matriks_A[i][j] - matriks_B[i][j];
+            cout << C[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
